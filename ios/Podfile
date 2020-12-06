@@ -8,11 +8,6 @@ target 'MovieUIDesign' do
 
   use_react_native!(:path => config["reactNativePath"])
 
-  target 'MovieUIDesignTests' do
-    inherit! :complete
-    # Pods for testing
-  end
-
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
@@ -20,14 +15,5 @@ target 'MovieUIDesign' do
   use_flipper!
   post_install do |installer|
     flipper_post_install(installer)
-  end
-end
-
-target 'MovieUIDesign-tvOS' do
-  # Pods for MovieUIDesign-tvOS
-
-  target 'MovieUIDesign-tvOSTests' do
-    inherit! :search_paths
-    # Pods for testing
   end
 end
